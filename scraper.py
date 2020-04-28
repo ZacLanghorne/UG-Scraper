@@ -47,7 +47,7 @@ for i in range(len(page_link)):
     for i in range(len(chord_elements)):
         chords.append(chord_elements[i].text) # Save the chord elements for each song to a vector
     song_chords.append(" ".join(chords)) # Turn the list of chords in to a single string
-    print("Scraped " + str(len(song_chords)) + " out of " + str(len(link_element)))
+    print("Scraped " + str(len(song_chords)) + " out of " + str(len(page_link)))
 
 to_df = list(zip(song_name,song_chords)) # Create a tuple of the song name with its chords
 data = pd.DataFrame(to_df, columns=['Song Name','Chords']) # Create a data frame of the song with its chords
